@@ -1,0 +1,8 @@
+li:first-child > a > span {
+  background-color: #7d2d23;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

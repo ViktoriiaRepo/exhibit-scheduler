@@ -1,0 +1,29 @@
+<div
+  id="wrapper"
+  class="flex h-screen bg-gray-100 sm:flex-col md:flex-row font-light w-full"
+>
+  <aside
+    class="relative bg-orange-800 md:w-64 overflow-y-scroll sm:w-full pt-8"
+  >
+    <i
+      class="absolute top-4 right-4 fa-solid fa-chevron-left text-white"
+      aria-label="Close menu"
+    ></i>
+
+    <ul id="menu" class="flex flex-col list-none sm:hidden md:block">
+      @for (item of menuItems; track item.title) {
+      <li class="block">
+        <a
+          [routerLink]="item.route"
+          class="no-underline text-white block h-full w-full px-2 py-2 hover:text-orange-400"
+        >
+          <span class="icon-wrapper inline-block p-2 mr-2">
+            <i class="{{ item.icon }}" aria-hidden="true"></i>
+          </span>
+          {{ item.title }}
+        </a>
+      </li>
+      }
+    </ul>
+  </aside>
+</div>
